@@ -1,5 +1,6 @@
 package com.wilfred.emsbackend.emsbackend.services;
 
+import com.wilfred.emsbackend.emsbackend.exceptions.ResourceNotFoundException;
 import com.wilfred.emsbackend.emsbackend.model.Employee;
 import com.wilfred.emsbackend.emsbackend.repository.EmployeeRepository;
 import lombok.AllArgsConstructor;
@@ -21,7 +22,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee findById(Long id) {
         Optional<Employee> optionalEmployee = repository.findById(id);
-        return optionalEmployee.orElse(null);
+        return optionalEmployee.orElseThrow(() -> new ResourceNotFoundException("Cannot find employee with id : " + id));
     }
 
     @Override
