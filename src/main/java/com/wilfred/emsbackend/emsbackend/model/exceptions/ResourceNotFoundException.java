@@ -1,4 +1,4 @@
-package com.wilfred.emsbackend.emsbackend.exceptions;
+package com.wilfred.emsbackend.emsbackend.model.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

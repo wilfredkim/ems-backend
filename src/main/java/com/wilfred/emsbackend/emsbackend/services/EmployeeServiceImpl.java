@@ -1,6 +1,6 @@
 package com.wilfred.emsbackend.emsbackend.services;
 
-import com.wilfred.emsbackend.emsbackend.exceptions.ResourceNotFoundException;
+import com.wilfred.emsbackend.emsbackend.model.exceptions.ResourceNotFoundException;
 import com.wilfred.emsbackend.emsbackend.model.Employee;
 import com.wilfred.emsbackend.emsbackend.repository.EmployeeRepository;
 import lombok.AllArgsConstructor;

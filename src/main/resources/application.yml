@@ -9,5 +9,8 @@ spring:
     generate-ddl: true
     show-sql: false
 server:
-    port: 1001
+  port: 1001
+
+jwt:
+  secret: secretKey123$$$!!
 

@@ -1,9 +1,8 @@
 package com.wilfred.emsbackend.emsbackend.controller;
 
-import com.wilfred.emsbackend.emsbackend.exceptions.ResourceNotFoundException;
 import com.wilfred.emsbackend.emsbackend.model.Employee;
 import com.wilfred.emsbackend.emsbackend.services.EmployeeService;
-import org.springframework.http.HttpStatus;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +13,7 @@ import java.util.Map;
 @RestController
 @CrossOrigin(origins = "http://localhost:3000/")
 @RequestMapping("/api/v1/")
+@SecurityRequirement(name = "javainuseapi")
 public class EmployeeController {
     private EmployeeService employeeService;
 
